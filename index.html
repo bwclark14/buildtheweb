@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Code Editor</title>
+  
+  <!-- CodeMirror CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Live Code Editor</h1>
+    <label for="font-size" class="font-size-control">Font Size: 
+      <input type="range" id="font-size" min="12" max="24" value="14">
+    </label>
+  </header>
+
+  <div class="editor-container">
+    <!-- Sidebar for switching editors -->
+    <div class="sidebar">
+      <button id="htmlBtn" class="active">HTML</button>
+      <button id="cssBtn">CSS</button>
+      <button id="jsBtn">JavaScript</button>
+      <button id="newWindowBtn">Open Preview in New Window</button>
+    </div>
+
+    <!-- Editors for HTML, CSS, JS -->
+    <textarea id="htmlEditor" class="editor visible" placeholder="Write HTML code here"></textarea>
+    <textarea id="cssEditor" class="editor" placeholder="Write CSS code here"></textarea>
+    <textarea id="jsEditor" class="editor" placeholder="Write JavaScript code here"></textarea>
+
+    <!-- Preview Window -->
+    <iframe id="preview" class="preview"></iframe>
+  </div>
+
+  <!-- CodeMirror JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/css/css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
+  
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+</html>
