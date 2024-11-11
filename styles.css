@@ -1,0 +1,77 @@
+/* Reset basic styles */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+}
+
+header h1 {
+  flex-grow: 1;
+}
+
+.font-size-control {
+  margin-left: 20px;
+}
+
+/* Main editor container */
+.editor-container {
+  display: flex;
+  height: 100%;
+}
+
+/* Sidebar for editor buttons */
+.sidebar {
+  width: 120px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.sidebar button {
+  background-color: #444;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.sidebar button.active {
+  background-color: #555;
+}
+
+/* Code editor area */
+.editor {
+  flex-grow: 1;
+  display: none;
+  padding: 0;
+  height: 100%;
+}
+
+.editor.visible {
+  display: block;
+}
+
+/* Preview pane */
+.preview {
+  width: 50%;
+  padding: 10px;
+  resize: horizontal;
+  overflow: auto;
+  background-color: #f5f5f5;
+  border-left: 2px solid #ddd;
+}
